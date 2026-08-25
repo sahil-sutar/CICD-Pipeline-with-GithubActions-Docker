@@ -1,8 +1,7 @@
 name : CI build and push
 
 on:
-  push:
-    branches: ["main"]
+  workflow-dispatch:
 
 jobs:
   build:

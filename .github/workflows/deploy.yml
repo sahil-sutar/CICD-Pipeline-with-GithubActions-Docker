@@ -22,5 +22,5 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
-            docker run -d --restart always -p 80:8080 --name spring-app {{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
+            docker run -d --restart always -p 80:8080 --name spring-app ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
         

@@ -1,0 +1,19 @@
+name: deploy rest-api
+
+on:
+  workflow_run: 
+    workflows: [ "CI build and push" ]
+    types:
+      - completed 
+    branches: [ "main" ]
+
+jobs:
+  doploy-to-server:
+    runs-on:
+      - ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      -name: deploy via container
+       uses: appleboy/ssh-action@v1.0.3\
+       with:

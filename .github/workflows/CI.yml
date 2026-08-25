@@ -30,7 +30,7 @@ jobs:
       - name: push to dockerhub
         run: |
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest .
-          ducker push ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
          
          
           

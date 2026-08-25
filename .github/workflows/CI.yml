@@ -29,8 +29,8 @@ jobs:
 
       - name: push to dockerhub
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/REST-API:latest .
-          ducker push ${{ secrets.DOCKER_HUB_USERNAME }}/REST-API:latest
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest .
+          ducker push ${{ secrets.DOCKER_HUB_USERNAME }}/rest-api:latest
          
          
           
